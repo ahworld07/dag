@@ -224,3 +224,11 @@ func (d *DAG) String() string {
 
 	return result
 }
+
+// Vertexs return all vertices of a DAG.
+func (d *DAG) Vertexs() []*Vertexs{
+	var vertexs []*Vertexs
+	return d.vertices.Values()
+}
+
+
