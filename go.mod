@@ -1,4 +1,4 @@
-module github.com/goombaio/dag
+module github.com/ahworld07/dag
 
 require (
 	github.com/goombaio/orderedmap v0.0.0-20180924084748-ba921b7e2419
