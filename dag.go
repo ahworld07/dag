@@ -226,7 +226,7 @@ func (d *DAG) String() string {
 }
 
 // Vertexs return all vertices of a DAG.
-func (d *DAG) Vertexs_slice() []*Vertex {
+func (d *DAG) Vertexs_slice() []interface{} {
 	var vertexs []*Vertex
 	return d.vertices.Values()
 }
