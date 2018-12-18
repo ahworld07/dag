@@ -81,6 +81,7 @@ func (d *DAG) AddEdge(tailVertex *Vertex, headVertex *Vertex) error {
 	defer d.mu.Unlock()
 
 	// Check if vertices exists.
+	/*
 	for _, vertex := range d.vertices.Values() {
 		if vertex == tailVertex {
 			tailExists = true
@@ -89,6 +90,16 @@ func (d *DAG) AddEdge(tailVertex *Vertex, headVertex *Vertex) error {
 			headExists = true
 		}
 	}
+	*/
+	e1, _ := d.GetVertex(headVertex.ID)
+	if e1 != nil{
+		tailExists = true
+	}
+	e2, _ := d.GetVertex(tailVertex.ID)
+	if e2 != nil{
+		headExists = true
+	}
+
 	if !tailExists {
 		return fmt.Errorf("Vertex with ID %v not found", tailVertex.ID)
 	}
